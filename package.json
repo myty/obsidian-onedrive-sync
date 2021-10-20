@@ -1,20 +1,28 @@
 {
-    "name": "obsidian-sample-plugin",
-    "version": "0.12.0",
-    "description": "This is a sample plugin for Obsidian (https://obsidian.md)",
+    "name": "obsidian-onedrive-sync-plugin",
+    "version": "0.1.0",
+    "description": "Plugin for OneDrive Vault sync in Obsidian (https://obsidian.md)",
     "main": "main.js",
     "scripts": {
         "dev": "esbuild main.ts --bundle --external:obsidian --outdir=.  --target=es2016 --format=cjs --sourcemap=inline --watch",
-        "build": "esbuild main.ts --bundle --external:obsidian --outdir=.  --target=es2016 --format=cjs"
+        "build": "esbuild main.ts --bundle --external:obsidian --outdir=.  --target=es2016 --format=cjs",
+        "lint": "eslint --fix .",
+        "lint-check": "eslint ."
     },
-    "keywords": [],
-    "author": "",
+    "keywords": [
+        "obsidian-plugin"
+    ],
+    "author": "Michael Tyson",
     "license": "MIT",
     "devDependencies": {
         "@types/node": "^16.11.1",
-        "esbuild": "0.13.8",
+        "esbuild": "^0.13.8",
+        "eslint": "^8.0.1",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-prettier": "^4.0.0",
         "obsidian": "^0.12.17",
-        "tslib": "2.3.1",
-        "typescript": "4.4.4"
+        "prettier": "^2.4.1",
+        "tslib": "^2.3.1",
+        "typescript": "^4.4.4"
     }
 }
